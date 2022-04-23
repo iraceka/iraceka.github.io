@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<h1> Projects & Research </h1>
+
+{{content}}
+
+<br>
+
+    {% for project in site.projects %}
+    <!-- <a  href="{{project.url}}"> -->
+    <h2 style="font-family: 'Helvetica Neue', 'Courier New', 'Avenir'; font-size: 30px; color: steelblue;">{{project.title}}</h2>
+    {{ project.description }} <br>
+
+    {% if project.abstract %}
+        [{{project.abstract}}]
+    {% endif %}
+
+    {% if project.poster %}
+        [{{project.poster}}]
+    {% endif %}
+
+    {% if project.presentation %}
+        {{project.presentation}}
+    {% endif %}
+    <h4 style="font-family: 'Helvetica Neue', 'Courier New', 'Avenir'; font-size: 10px; color: steelblue;"> {{project.content}}</h4>
+
+    {% endfor %}
+
+
+
+ </a>
+
+<br>
+
+
+
